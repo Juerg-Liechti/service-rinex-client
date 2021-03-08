@@ -121,7 +121,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     latitude = 46.38851 # float | Latitude of your position. *Example 46.38851*
     longitude = 7.05977 # float | Longitude of your position. *Example 7.05977*
     time_from = "time_from_example" # str | Filter for stations that were operational starting at this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) (optional)
-    to = "to_example" # str | Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) (optional)
+    time_to = "time_to_example" # str | Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -135,7 +135,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # The base station object of the nearest active AGNES station.
-        api_response = api_instance.nearest(latitude, longitude, time_from=time_from, to=to)
+        api_response = api_instance.nearest(latitude, longitude, time_from=time_from, time_to=time_to)
         pprint(api_response)
     except openapi_client.ApiException as e:
         print("Exception when calling RINEXApi->nearest: %s\n" % e)
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
  **latitude** | **float**| Latitude of your position. *Example 46.38851* |
  **longitude** | **float**| Longitude of your position. *Example 7.05977* |
  **time_from** | **str**| Filter for stations that were operational starting at this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) | [optional]
- **to** | **str**| Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) | [optional]
+ **time_to** | **str**| Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G) | [optional]
 
 ### Return type
 

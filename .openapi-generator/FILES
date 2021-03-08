@@ -1,5 +1,6 @@
 .gitignore
 .gitlab-ci.yml
+.openapi-generator-ignore
 .travis.yml
 README.md
 docs/BaseStation.md
@@ -33,4 +34,11 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_base_station.py
+test/test_callback_answer.py
+test/test_error.py
+test/test_nearest_station.py
+test/test_request_data.py
+test/test_rinex_api.py
+test/test_scheduled_request.py
 tox.ini

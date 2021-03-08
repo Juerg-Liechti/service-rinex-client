@@ -169,7 +169,7 @@ class RINEXApi(object):
 
             Keyword Args:
                 time_from (str): Filter for stations that were operational starting at this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G). [optional]
-                to (str): Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G). [optional]
+                time_to (str): Filter for stations that were operational until this time point (e.g. yyyy-MM-ddThh:00G or yyyyMMddThh00G). [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -236,7 +236,7 @@ class RINEXApi(object):
                     'latitude',
                     'longitude',
                     'time_from',
-                    'to',
+                    'time_to',
                 ],
                 'required': [
                     'latitude',
@@ -261,20 +261,20 @@ class RINEXApi(object):
                         (float,),
                     'time_from':
                         (str,),
-                    'to':
+                    'time_to':
                         (str,),
                 },
                 'attribute_map': {
                     'latitude': 'latitude',
                     'longitude': 'longitude',
                     'time_from': 'time_from',
-                    'to': 'to',
+                    'time_to': 'time_to',
                 },
                 'location_map': {
                     'latitude': 'query',
                     'longitude': 'query',
                     'time_from': 'query',
-                    'to': 'query',
+                    'time_to': 'query',
                 },
                 'collection_format_map': {
                 }
